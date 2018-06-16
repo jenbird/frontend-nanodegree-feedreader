@@ -1,17 +1,17 @@
 // feedreader.js for Jasmine tests
 /* All tests have been put in the $() function,
-* since some of these tests may require DOM elements.
-* We want to ensure they don't run until the DOM is ready.
-*/
+ * since some of these tests may require DOM elements.
+ * We want to ensure they don't run until the DOM is ready.
+ */
 
 $(function() {
   // Test suite for RSS feeds definitions checking the allFeeds variable
 
   describe('RSS Feeds', function() {
-     /* Test to make sure that the to make sure that the
-      * allFeeds variable has been defined and that it is not
-      * empty.
-      */
+    /* Test to make sure that the to make sure that the
+     * allFeeds variable has been defined and that it is not
+     * empty.
+     */
     it('are defined', function() {
       expect(allFeeds).toBeDefined();
       expect(allFeeds.length).not.toBe(0);
@@ -26,8 +26,8 @@ $(function() {
     });
 
     /* Test loops through feeds, ensures there is a name
-    * and it is not empty
-    */
+     * and it is not empty
+     */
     it('name is defined', function() {
       for (let feed of allFeeds) {
         expect(feed.name).toBeDefined();
@@ -36,7 +36,7 @@ $(function() {
     });
   });
 
-// The Menu test suite
+  // The Menu test suite
   describe('The Menu', function() {
 
     // Test that ensures the menu element is hidden by default.
@@ -85,8 +85,8 @@ $(function() {
   // New test suite for New Feed Selection
   describe('New Feed Selection', function() {
 
-     // Content changes on new load feeds
-     // Asynchronous test
+    // Content changes on new load feeds
+    // Asynchronous test
     let firstLoadFeed,
       secondLoadFeed;
 
